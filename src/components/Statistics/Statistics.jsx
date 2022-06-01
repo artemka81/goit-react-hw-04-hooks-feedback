@@ -11,7 +11,7 @@ export const Statistics = ({ options, total, positivePercentage }) => {
     <>
       {statList}
       <p>Total: {total}</p>
-      <p>Positive feedback: {positivePercentage}%</p>
+      <p>Positive feedback: {positivePercentage()}%</p>
     </>
   );
 };
@@ -19,5 +19,5 @@ export const Statistics = ({ options, total, positivePercentage }) => {
 Statistics.propTypes = {
   options: PropTypes.array.isRequired,
   total: PropTypes.number.isRequired,
-  positivePercentage: PropTypes.number,
+  positivePercentage: PropTypes.func.isRequired,
 };
